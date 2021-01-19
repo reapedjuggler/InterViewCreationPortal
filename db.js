@@ -1,0 +1,1 @@
+// For setting up mongoDB call this file in server.js
