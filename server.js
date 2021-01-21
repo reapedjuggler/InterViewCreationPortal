@@ -1,8 +1,12 @@
-const express = require('express');
-const path = require('path');
+// Keep Working Hard MAN! these efforts will surely pay one day
+
+const express = require ('express');
+const path = require ('path');
+const db = require ('./db'); 
 
 const app = express();
 
+app.set('view engine','ejs');
 
 // First render
 app.use(express.static(path.join(__dirname, 'public')));

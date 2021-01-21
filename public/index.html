@@ -1,17 +1,55 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
 
-            
+<head>
+    <title>InterView Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    </body>
+<body>
+
+    <form action = "/api/create" method = "POST">
+       
+        <div class="form-group">
+            <label for="exampleFormControlInput1">User ID&nbsp;&nbsp;</label>
+            <input type="number" name="id" class="form-controlid">
+        </div>
+       
+        <div class="form-group">
+            <label for="name"> Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+            <input type = "text" name = "name" placeholder="Reaped">
+        </div>
+
+        <div class="form-group">
+            <label for="startTime"> Start Time &nbsp;&nbsp;&nbsp;</label>
+            <input type = "time" name = "startTime">
+        </div>
+
+        <div class="form-group">
+            <label for="endTime"> End Time &nbsp;&nbsp;&nbsp;</label>
+            <input type = "time" name = "endTime">
+        </div>
+
+        <br><br>
+
+        <div>
+            <label for="submit"> Create InterView </label>
+            <input name = "btn" type = "submit">
+        </div>
+
+        <p></p>
+    </form>
+
+    <form action = "/api/display">
+
+        <div>
+            <label for="submit"> Show InterView's </label>
+            <input name = "btn" class = "btn" type = "submit">
+        </div>
+
+    </form>
+
+</body>
+
 </html>
