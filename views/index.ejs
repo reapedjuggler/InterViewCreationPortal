@@ -8,14 +8,29 @@
     </head>
     <body>
 
+        <div><h1>Details</h1></div>
+
         <ul class="todo-list">
 
-            <div>Hello Reaped</div>
             <% table.forEach(itr => { %>
 
             <li class="todo-list-item">
 
-                <div class="todo-list-item-name"> <%= itr.content%> </div>
+            <div>   
+                <table>             
+                    <th>   
+                    <%= itr.name%> 
+
+                    <%= itr.id%> 
+
+                    <%= itr.startTime%> 
+
+                    <%= itr.endTime%> 
+                    </th>
+                </table>
+            </div>
+            <p></p>
+
 
             </li>
 
