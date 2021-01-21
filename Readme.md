@@ -1,4 +1,3 @@
-// Basically there is a page of index.html which is fixed we dont
 
 1. An interview creation page where the admin can create an interview by selecting participants, start time, and end time. Backend should throw an error with a proper error message if:                -- POST REQUEST  with some query
 
