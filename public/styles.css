@@ -78,9 +78,18 @@ input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
 }
-
-
 /* Add a background color to the submit button on mouse-over */
 input[type=submit]:hover {
     background-color: #45a049;
+}
+
+.btn1 {
+    width: 20%;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }

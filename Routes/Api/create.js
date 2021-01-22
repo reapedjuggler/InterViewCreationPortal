@@ -10,9 +10,10 @@ async function validate (start, end, id, name) {
     if (end === "00:00") end = "24:00";                                 
                                                          // Just For convienience
     await Table.find({}, (err, data) => {                // We need to Use async keyword because This can take time ......
-        console.log(" Inside find");
         arr = data;
     });
+
+    console.log(arr, " \n\niam arr\n\n");
 
     if (arr.length <= 2) {
         return false;
@@ -28,11 +29,8 @@ async function validate (start, end, id, name) {
             if (arr[i].endTime === "00:00") arr[i].endTime = "24:00";
 
             if ((arr[i].endTime >= start && end >= arr[i].endTime)  || ( arr[i].startTime <= end && start <= arr[i].startTime)) {
-                continue;
-            }
-
-            else
                 return false;
+            }
         }
     }
     return true;
@@ -40,6 +38,7 @@ async function validate (start, end, id, name) {
 
 route.post('/', async (req, res, next) => {
 
+    
     let startTime = req.body.startTime;
     let endTime = req.body.endTime;
     let id = parseInt(req.body.id);
@@ -52,6 +51,7 @@ route.post('/', async (req, res, next) => {
         res.render('failure', {
             message: `Sorry ${name} is already enrolled in an interview at that time, Please pick some different other Slot!`
         });
+        return;
     }
 
     const newInterView = new Table({
