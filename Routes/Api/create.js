@@ -13,8 +13,6 @@ async function validate (start, end, id, name) {
         arr = data;
     });
 
-    console.log(arr, " \n\niam arr\n\n");
-
     if (arr.length <= 2) {
         return false;
     }
